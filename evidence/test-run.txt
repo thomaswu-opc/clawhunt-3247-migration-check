@@ -1,0 +1,39 @@
+$ python -m unittest discover -s tests -t . -v
+# 2026-11-26T13:10:21+08:00
+test_activity_all_match (tests.test_acceptance.TestCompare.test_activity_all_match) ... ok
+test_activity_diff_field (tests.test_acceptance.TestCompare.test_activity_diff_field) ... ok
+test_activity_time_truncated (tests.test_acceptance.TestCompare.test_activity_time_truncated) ... ok
+test_classify_no_info_forbidden (tests.test_acceptance.TestCompare.test_classify_no_info_forbidden) ... ok
+test_duplicate_id_flagged (tests.test_acceptance.TestCompare.test_duplicate_id_flagged) ... ok
+test_interaction_company_mislink (tests.test_acceptance.TestCompare.test_interaction_company_mislink) ... ok
+test_missing_record (tests.test_acceptance.TestCompare.test_missing_record) ... ok
+test_not_covering_all (tests.test_acceptance.TestHealth.test_not_covering_all) ... ok
+test_not_history_table (tests.test_acceptance.TestHealth.test_not_history_table) ... ok
+test_uses_history_ok (tests.test_acceptance.TestHealth.test_uses_history_ok) ... ok
+test_run_check_mock_all_match (tests.test_acceptance.TestIntegration.test_run_check_mock_all_match) ... ok
+test_run_check_mock_detects_problems (tests.test_acceptance.TestIntegration.test_run_check_mock_detects_problems) ... ok
+test_diff_seed_diff_sample (tests.test_acceptance.TestSampling.test_diff_seed_diff_sample) ... ok
+test_same_seed_same_sample (tests.test_acceptance.TestSampling.test_same_seed_same_sample) ... ok
+test_sample_30_and_100 (tests.test_acceptance.TestSampling.test_sample_30_and_100) ... ok
+test_sample_digest_stable (tests.test_acceptance.TestSampling.test_sample_digest_stable) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.009s
+
+OK
+
+$ python run_check.py --mock --seed 20261126
+seed=20261126  活动=30  互动=100
+健康分：健康分引用来源=历史互动表，覆盖本批 100 条
+问题 4 条：
+  字段错位   1
+  时间截断   1
+  关联错位   1
+  丢失     1
+输出 -> out
+
+$ python run_check.py --mock --seed 20261127  # 换种子，验证样本变化
+seed=20261127  活动=30  互动=100
+健康分：健康分引用来源=历史互动表，覆盖本批 100 条
+问题 4 条：
+  字段错位   1

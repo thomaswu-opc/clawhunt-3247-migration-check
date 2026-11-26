@@ -1,0 +1,35 @@
+$ E:/ClawHunt/acceptance/2824/work/.venv/Scripts/python.exe -m pytest -v
+# 2026-11-26T13:10:09  exit=0
+
+============================= test session starts =============================
+platform win32 -- Python 3.13.14, pytest-9.2.0, pluggy-1.7.0 -- E:\ClawHunt\acceptance\2824\work\.venv\Scripts\python.exe
+rootdir: E:\ClawHunt\acceptance\3247\work
+plugins: anyio-4.16.0
+collecting ... collected 16 items
+
+tests/test_acceptance.py::TestSampling::test_diff_seed_diff_sample PASSED [  6%]
+tests/test_acceptance.py::TestSampling::test_same_seed_same_sample PASSED [ 12%]
+tests/test_acceptance.py::TestSampling::test_sample_30_and_100 PASSED    [ 18%]
+tests/test_acceptance.py::TestSampling::test_sample_digest_stable PASSED [ 25%]
+tests/test_acceptance.py::TestCompare::test_activity_all_match PASSED    [ 31%]
+tests/test_acceptance.py::TestCompare::test_activity_diff_field PASSED   [ 37%]
+tests/test_acceptance.py::TestCompare::test_activity_time_truncated PASSED [ 43%]
+tests/test_acceptance.py::TestCompare::test_classify_no_info_forbidden PASSED [ 50%]
+tests/test_acceptance.py::TestCompare::test_duplicate_id_flagged PASSED  [ 56%]
+tests/test_acceptance.py::TestCompare::test_interaction_company_mislink PASSED [ 62%]
+tests/test_acceptance.py::TestCompare::test_missing_record PASSED        [ 68%]
+tests/test_acceptance.py::TestHealth::test_not_covering_all PASSED       [ 75%]
+tests/test_acceptance.py::TestHealth::test_not_history_table PASSED      [ 81%]
+tests/test_acceptance.py::TestHealth::test_uses_history_ok PASSED        [ 87%]
+tests/test_acceptance.py::TestIntegration::test_run_check_mock_all_match PASSED [ 93%]
+tests/test_acceptance.py::TestIntegration::test_run_check_mock_detects_problems PASSED [100%]
+
+============================= 16 passed in 0.11s ==============================
+
+
+## AC coverage
+AC-1   unclear        PASS  doc/manual
+AC-2   doc_verifiable PASS  doc/manual
+AC-3   doc_verifiable PASS  doc/manual
+
+GATE: PASS

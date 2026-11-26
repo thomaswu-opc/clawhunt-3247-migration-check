@@ -1,0 +1,19 @@
+{
+  "activity_sampled": 30,
+  "interaction_sampled": 100,
+  "activity_checked": 30,
+  "interaction_checked": 100,
+  "problem_count": 4,
+  "category_counts": {
+    "字段错位": 1,
+    "时间截断": 1,
+    "关联错位": 1,
+    "丢失": 1,
+    "重复": 0,
+    "其他": 0
+  },
+  "health_ok": true,
+  "health_check": "健康分引用来源=历史互动表，覆盖本批 100 条",
+  "seed": 20261126,
+  "digest": "3851fbfcf9c48a803a9bcd2c2a0161f405ff496356237bc5109b3d59db6395f7"
+}

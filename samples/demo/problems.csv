@@ -1,0 +1,5 @@
+kind,id,category,detail
+activity,A003,字段错位,registered_count: 23→11
+activity,A007,时间截断,end_time: 2026-09-08 12:00→2026-09-08
+interaction,I0012,关联错位,company_id: C013→C999
+interaction,I0050,丢失,company_id: C011→None; contact_name: 联系人1→None; interaction_type: 来电→None; occurred_at: 2026-10-23 02:50→None; recorder: 记录员3→None
